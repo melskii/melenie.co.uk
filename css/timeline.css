@@ -1,0 +1,203 @@
+
+
+.parent {
+    overflow: hidden;
+    /*border: solid;*/
+    padding-left: 10px;
+    padding-right: 10px;
+    /*position: relative;*/
+}
+
+.timeline {
+
+    min-height:350px;
+    /*border: solid;*/
+    overflow: scroll;
+    padding-bottom: 15px;
+
+
+
+}
+
+
+.parent .row {
+
+    display: table;
+    margin: 0 auto;
+
+}
+
+p {
+    width: 400%;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.timeline-list {
+    width: inherit;
+    margin-top: 18%;
+    margin-left: 50px;
+    /*border: solid;*/
+
+}
+
+
+
+.timeline-list ul {
+    display: table-row;
+
+}
+
+.timeline-list ul li {
+
+    display: table-cell;
+    list-style-type: none;
+    /*position: relative;*/
+    min-width: 300px;
+    margin: 0 auto;
+    /*padding-top: 50px;*/
+    padding: 5px 50px 0px 50px;
+    border-top: solid 5px #F5DA53;
+    /*vertical-align: top;*/
+}
+
+
+
+.timeline-list ul li .before {
+    content: '';
+    /*position: absolute;*/
+    margin-top: -5%;
+    min-width: 25px;
+    min-height: 25px;
+    border: solid 5px #F5DA53;
+    border-radius: 50%;
+    background: #F5DA53;
+    margin-left: 50%;
+    margin-right: 50%;
+    margin-bottom: 10px;
+}
+
+.timeline-list ul li .element {
+    position: relative;
+    bottom: 0;
+
+    max-height: 200px;
+    width: 400px;
+    padding: 15px;
+    background: #ff9c29;
+    color: white;
+}
+
+
+
+/* Odd Elements */
+.timeline ul li:nth-child(odd) .element {
+    top:30px;
+}
+
+.timeline ul li:nth-child(odd) .element::before {
+
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: -35px;
+    margin-left: 45%;
+    margin-right: 55%;
+    border: solid 20px;
+    border-color: transparent transparent #ff9c29  transparent;
+}
+
+
+/* Even Elements */
+.timeline ul li:nth-child(even) .element  {
+    /*top: -240px;*/
+
+   bottom: 250px;
+}
+
+.timeline ul li:nth-child(even) .element::after {
+
+    content: '';
+    position: absolute;
+    border: solid 20px black;
+    height: 0px;
+    width: 0px;
+    bottom: -35px;
+    right: 40%;
+    border-color: #ff9c29 transparent transparent transparent;
+}
+
+/* New CSS */
+.timeline ul li::after {
+    background: #fff;
+    transition: background .5s ease-in-out;
+}
+
+.timeline ul li.in-view::after {
+    background: #ff9c29;
+}
+
+.timeline ul li .element {
+    visibility: hidden;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+
+.timeline ul li:nth-child(odd) div {
+    transform: translate3d(200px,0,0);
+}
+
+.timeline ul li:nth-child(even) div {
+    transform: translate3d(-200px,0,0);
+}
+
+.timeline ul li.in-view div {
+    transform: none;
+    visibility: visible;
+    opacity: 1;
+}
+
+time {
+    font-size: x-large;
+    display: block;
+}
+
+time::after {
+    /*content: '';*/
+}
+
+.timeline .label.secondary {
+    background-color: white; !important;
+    color: #5C5A4E; !important;
+    font-weight:;: bolder;
+    font-size: 0.9em;
+    margin-bottom: 2px;
+}
+
+.timeline-list ul li .end {
+    position: relative;
+    bottom: 0;
+
+    max-height: 200px;
+    width: 400px;
+    padding: 15px;
+    background: #e83d30;
+    color: white;
+}
+
+
+@media (max-width: 1366px) {
+    .timeline-list {
+        width: inherit;
+        margin-top: 25%;
+        margin-left: 50px;
+        /*border: solid;*/
+
+    }
+
+
+}
+

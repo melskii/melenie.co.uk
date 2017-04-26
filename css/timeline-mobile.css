@@ -1,0 +1,68 @@
+
+
+
+.tline {
+    color: black;
+    /*background-color: #00869A ;*/
+
+}
+
+.tline ul li {
+    list-style-type: none;
+    position: relative;
+    width: 6px;
+    margin: 0 auto;
+    margin-left: 20px;
+    padding-top: 50px;
+    background: #fff;
+}
+
+.tline ul li::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: inherit;
+}
+
+.tline ul li .element {
+    position: relative;
+    bottom: 0;
+    width: calc(100vw - 101px);
+    padding: 15px;
+    background: white;
+}
+
+.tline ul li .element::before {
+    content: '';
+    position: absolute;
+    bottom: 7px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.tline ul li .element {
+    left: 45px;
+}
+
+.tline ul li .element::before {
+    left: -15px;
+    border-width: 8px 16px 8px 0;
+    border-color: transparent white transparent transparent;
+}
+
+time {
+    font-size: larger;
+    display: block;
+}
+
+.skills-tline {
+    display: block;
+
+}
+
